@@ -1,0 +1,14 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - pwd
+      - ls -alt
+      - sam build -b target
+      - aws cloudformation package --template-file target/template.yaml  --s3-bucket jjouhiu-sam-test --output-template-file package-template.yaml 
+artifacts:
+  type: zip
+  files:
+    - template.yaml
+    - package-template.yaml
+    - target
