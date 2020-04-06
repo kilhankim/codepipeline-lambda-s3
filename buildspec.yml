@@ -5,7 +5,7 @@ phases:
       - pwd
       - ls -alt
       - sam build -b target
-      - aws cloudformation package --template-file target/template.yaml  --s3-bucket jjouhiu-sam-test --output-template-file package-template.yaml 
+      - aws cloudformation package --template-file target/template.yaml  --s3-bucket jjouhiu-sam-s3 --output-template-file package-template.yaml 
 artifacts:
   type: zip
   files:
