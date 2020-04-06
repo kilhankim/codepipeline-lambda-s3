@@ -17,9 +17,6 @@ Resources:
       CodeUri: hello-world/
       Handler: app.lambdaHandler
       Runtime: nodejs12.x
-      VpcConfig:
-        SecurityGroupIds: [sg-0c94f5fcee6b8d8a2]
-        SubnetIds: [subnet-0242f9147396684a1, subnet-0d56c932d32237c54]
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
